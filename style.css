@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(0, 5, 59);
+}
+
+.difficulty {
+    /* width: 70%; */
+    margin: auto;
+    display: flex;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+}
+
+#easy {
+    grid-area: easy;
+}
+
+#medium {
+    grid-area: medium;
+}
+
+#hard {
+    grid-area: hard;
+}
+
+.body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    /* display: flex; */
+    align-items: center;
+    justify-content: space-around;
+}
+
+.board {
+    width: 93vmin;
+    height: 93vmin;
+    background: linear-gradient(180deg, rgb(160, 243, 36), rgb(198, 198, 0));
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(18, 1fr);
+}
+
+
+.head {
+    /* background-image: url('food.png') center center/cover; */
+    background: linear-gradient(180deg, #0400ff, #4744ff);
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+.snake {
+    background: linear-gradient(180deg, #0400ff, #4744ff);
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.food {
+    /* background: linear-gradient(90deg); */
+    background: linear-gradient(180deg, red, rgb(255, 93, 30));
+    border: 2px solid rgb(255, 255, 255);
+    margin: 4px;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.button {
+    background-color: rgb(42, 42, 255);
+    color: white;
+    font-size: 3vmin;
+    font-weight: bolder;
+    padding: 1rem 2rem;
+    margin: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+}
+
+.button:hover {
+    background-color: rgb(36, 36, 230);
+    cursor: pointer;
+}
+
+.score {
+    padding: 1em;
+    font-size: 35px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: #c83349;
+}
+
+#score {
+    color: white;
+}
+
+/* .score>img {} */
