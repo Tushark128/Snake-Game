@@ -1,10 +1,12 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: rgb(0, 5, 59);
+    background: url(./bg.jpg) center center/cover no-repeat;
+    /* background-color: rgb(0, 5, 59); */
 }
 
 .difficulty {
@@ -16,7 +18,7 @@ body {
     justify-content: center;
 }
 
-#easy {
+/* #easy {
     grid-area: easy;
 }
 
@@ -26,52 +28,54 @@ body {
 
 #hard {
     grid-area: hard;
-}
+} */
 
 .body {
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: auto 2fr auto;
     /* display: flex; */
     align-items: center;
     justify-content: space-around;
 }
 
 .board {
-    width: 93vmin;
-    height: 93vmin;
-    background: linear-gradient(180deg, rgb(160, 243, 36), rgb(198, 198, 0));
+    width: 90vmin;
+    height: 90vmin;
+    background: url(./board.avif) center center/cover no-repeat;
+    /* background: linear-gradient(180deg, rgb(13, 255, 0), rgb(169, 255, 104)); */
     display: grid;
     grid-template-columns: repeat(18, 1fr);
     grid-template-rows: repeat(18, 1fr);
+    border: 1px solid green;
 }
 
 
 .head {
-    /* background-image: url('food.png') center center/cover; */
-    background: linear-gradient(180deg, #0400ff, #4744ff);
+    /* background: url(/Untitled.png) center top/cover; */
+    background: linear-gradient(180deg, #00ff1e, #00c63f);
     border-radius: 10px;
     border: 2px solid white;
 }
 
 .snake {
-    background: linear-gradient(180deg, #0400ff, #4744ff);
-    border: 1px solid white;
     border-radius: 10px;
+    background: linear-gradient(180deg, #39ff85, #00ff2f);
+    background: linear-gradient(180deg, #00ff1e, #00c63f);
+
+
+    border: 1px solid white;
 }
 
 .food {
-    /* background: linear-gradient(90deg); */
-    background: linear-gradient(180deg, red, rgb(255, 93, 30));
-    border: 2px solid rgb(255, 255, 255);
-    margin: 4px;
     box-sizing: border-box;
-    border-radius: 50%;
+    background: url(./food2.png) center center/cover;
 }
 
 .button {
-    background-color: rgb(42, 42, 255);
+    background-color: rgb(0, 179, 27);
+    border: 1px solid green;
     color: white;
     font-size: 3vmin;
     font-weight: bolder;
@@ -82,7 +86,7 @@ body {
 }
 
 .button:hover {
-    background-color: rgb(36, 36, 230);
+    background-color: rgb(10, 189, 37);
     cursor: pointer;
 }
 
@@ -92,11 +96,17 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    color: #c83349;
+    color: springgreen;
 }
 
 #score {
     color: white;
 }
 
-/* .score>img {} */
+@media (max-width:1469px) {
+    .body {
+        width: 90%;
+    }
+}
+
+/* transform: rotate(90deg); */
